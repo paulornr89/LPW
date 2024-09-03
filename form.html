@@ -7,18 +7,41 @@
 </head>
 <body>
     <form>
-        <div>
-            <label>Nome:</label>
-            <input type="text" id="nome"/>
+        <div class="row">
+            <div>
+                <label>Nome do Cliente:</label>
+                <input type="text" id="nome"/>
+            </div>
+            <div>
+                <label>Você indicaria nossos serviços?</label>
+                <Select id="indicacao">
+                    <option></option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </Select>
+            </div>
         </div>
         <div>
-            <label>Nome:</label>
-            <input type="text" id="nome"/>
+            <label>Qual avaliação você dá ao nosso produto?</label>
+            <input type="radio" id="ruim" value="ruim"/>
+            <label for="ruim">Ruim</label>
+            <input type="radio" id="bom" value="bom"/>
+            <label for="bom">Bom</label>
+            <input type="radio" id="otimo" value="otimo"/>
+            <label for="otimo">Ótimo</label>
         </div>
         <div>
-            <label>Observações:</label>
-            <textarea cols="5" rows="5" id="observacoes"></textarea>
+            <label>Utilizou nosso delivery?</label>
+            <input type="checkbox" id="sim" value="sim"/>
+            <label for="sim">Sim</label>
+            <input type="checkbox" id="nao" value="nao"/>
+            <label for="nao">Não</label>
         </div>
+        <div>
+            <label>Nos dê o seu feedback:</label>
+            <textarea cols="10" rows="5" id="feedback"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
