@@ -1,0 +1,177 @@
+/*ESTILIZAÇÕES PADRÃO*/
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #23262b;
+}
+
+/*PÁGINA INICIAL*/
+header {
+    color: #e4e1dc;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url(/assets/capaMedia.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 40vh;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #23262b;
+    font-size: 3em;
+    /* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
+    text-shadow: 10px 8px 10px #23262b;
+}
+
+nav {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    width: 100wh;
+    background-color: #e4e1dc;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+nav a:visited, nav a {
+    color: #23262b;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+/*CALCULADORA*/
+.calculadora {
+    color: #e4e1dc;
+    border: 1px solid #e4e1dc;
+    width: max-content;
+    padding: 20px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;;
+}
+
+.calculadora input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.calculadora h2 {
+    text-align: center;
+}
+
+.calculadora .numbers {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    gap: 5px;
+}
+
+.calculadora .numbers input {
+    width: 100px;
+    height: 10vh;
+    font-size: xx-large;
+}
+
+.calculadora .operacoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.operacoes button{
+    height: 10vh;   
+    width: 5vw; 
+    font-size: x-large;
+    border-radius: 100%;
+    border: none;
+    background-color: tomato;
+    transition: transform 0.3s;
+}
+
+.operacoes button:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+.showNumbers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calculadora .result input{
+    height: 15vh;
+}
+
+/*FORMULÁRIO*/
+input, textarea, select {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+textarea {
+    resize: none;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.col-sm-6 {
+    width: 50%;
+}
+
+form button {
+    width: 20%;
+    height: 8vh;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: yellowgreen;
+    color: white;
+    align-self: flex-end;
+    border: none;
+    transition: transform 0.3s;
+}
+
+form button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+form {
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #e4e1dc;
+}
+
+
+
