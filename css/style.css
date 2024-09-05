@@ -38,15 +38,25 @@ header {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-image: url(/assets/capaMedia.jpg);
+    background-image: url("/assets/capaMedia.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    height: 40vh;
+    background-size: 100%;
+    height: 25vh;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #23262b;
     font-size: 3em;
     /* deslocamento-x | deslocamento-y | raio-de-desfoque | cor */
     text-shadow: 10px 8px 10px #23262b;
+}
+
+#logo {
+    margin-right: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 5px solid #e4e1dc;
+    box-shadow: 10px 15px 50px #23262b;
 }
 
 /*MENU*/
@@ -79,9 +89,10 @@ nav a:hover {
 /*RODAPE*/
 footer {
     background-color: #31343a;
-    margin-top: auto;
+    margin-top: 20vh;
     padding: 20px;
     border-top: 1px solid #e4e1dc;
+    color: #e4e1dc;
 }
 
 footer li {
@@ -90,8 +101,46 @@ footer li {
     gap: 15px;
 }
 
+footer span {
+    font-size: small;
+    float: right;
+}
+
+footer span a {
+    color: aquamarine;
+    text-decoration: underline;
+}
+
 footer img {
     width: 20px;
+}
+
+/*HOME*/
+.conteudoPrincipal, .conteudoSecundario {
+    padding: 30px;;
+    text-indent: 2em;
+    margin-top: 10px;
+    color: #e4e1dc;
+    text-align: justify;
+}
+
+.conteudoPrincipal {    
+    font-size: large;
+}
+
+.conteudoPrincipal img {
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 350px;
+    height: 300px;
+}
+
+.conteudoSecundario img {
+    float: right;
+    margin-left: 10px;
+    width: 200px;
+    height: 150px;
 }
 
 /*CALCULADORA*/
@@ -106,14 +155,6 @@ footer img {
     flex-direction: column;
     gap: 20px;
     border-radius: 5px;
-    box-shadow: 0.5px 0.5px 5px #e4e1dc;
-    transition: transform 0.7s;
-}
-
-.calculadora:hover {
-    transform: scale(1.1);
-    box-shadow: 0.5px 0.5px 10px #e4e1dc;
-    transition: transform 0.7s;
 }
 
 .calculadora input::-webkit-inner-spin-button {
@@ -134,23 +175,38 @@ footer img {
 .calculadora .showNumbers .numbers input {
     width: 100px;
     height: 10vh;
-    font-size: xx-large;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.result input {
+    font-size: 40px;
+    width: 150px;
+    height: 15vh;
+    font-weight: bolder;
+    text-align: center;
+    background-color: #adadad;
 }
 
 .calculadora .operacoes {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    gap: 10px;
 }
 
 .operacoes button{
-    height: 10vh;   
-    width: 5vw; 
+    height: 65px;   
+    width: 65px; 
     font-size: x-large;
     border-radius: 100%;
     border: none;
     background-color: tomato;
     transition: transform 0.3s;
+}
+
+#limpar {
+    background-color: greenyellow; 
 }
 
 .operacoes button:hover {
@@ -161,18 +217,19 @@ footer img {
 .showNumbers {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-around;
 }
 
-.calculadora .result input{
-    height: 15vh;
-}
 
 /*FORMULÁRIO*/
 input, textarea, select {
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal; 
     border-radius: 5px;
     border: 1px solid black;
     background-color: #e4e1dc;;
+    font-weight: bolder;
 }
 
 textarea {
@@ -285,6 +342,154 @@ ul {
 
 .listaDePratos ul li:nth-child(odd) {
     font-weight: bolder;
+}
+
+@media only screen and (max-width: 1100px) {	
+    header {
+        font-size: 1.5em;
+        height: 15vh;
+    }
+
+    #logo {
+        margin-right: 30px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    nav {
+        background-color: #e4e1dc;
+        height: 10vh;
+        font-size: larger;
+    }
+
+    .conteudoPrincipal img {
+        float: left;
+        margin-top: 20px;
+        margin-right: 10px;
+        width: 40%;
+        height: 20vh;
+    }
+    
+    .conteudoSecundario img {
+        float: right;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 25%;
+        height: 20vh;
+    }
+
+    footer li {
+        font-size: 12px;
+    }
+        
+    footer span {
+        font-size: 10px;
+    }
+
+    .calculadora {
+        background-color: #31343a;
+        color: #e4e1dc;
+        border: 1px solid #e4e1dc;
+        width: max-content;
+        padding: 20px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 5px;
+    }
+        
+    .calculadora .showNumbers .numbers input {
+        width: 70px;
+        height: 5vh;
+        font-size: xx-large;
+    }
+
+    .calculadora .result input{
+        height: 10vh;
+    }
+
+    .operacoes button{
+        height: 50px;   
+        width: 50px; 
+    }
+    
+    .operacoes button:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s;
+    }
+
+    .cardapio img {
+        width: 100%;
+        height: 10vh;
+    }
+
+    .cardapio table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: medium;
+    }
+
+    form button {
+        height: 5vh;
+    }    
+}
+
+@media only screen and (max-width: 725px) {
+    header {
+        min-width: min-content;
+    }
+
+    .conteudoPrincipal {    
+        font-size: small;
+    }
+
+    .conteudoSecundario {
+        font-size: xx-small;
+    }
+
+    form {
+        min-width: 300px;
+    }
+
+    nav {
+        background-color: #e4e1dc;
+        height: 5vh;
+        font-size: medium;
+        min-width: max-content;
+    }
+
+    .cardapio img {
+        width: 100%;
+        height: 7vh;
+    }
+
+    .cardapio table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: small;
+    }
+
+    .listaDePratos {
+        width: 30%;
+        font-size: small;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    label {
+        font-size: small;
+    }
+
+    form button {
+       width: auto;
+    } 
+    
+    .calculadora {
+        min-width: 200px;
+    }
 }
 
 
