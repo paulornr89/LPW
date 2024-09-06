@@ -17,11 +17,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         }
     })
+    
     if(location.pathname == "/form.html"){
         document.querySelector("#enviarForm").onclick = (e) => {
             camposVazios()
         }
     }
+    /**Inclui a classe para dar destaque na opção da navbar selecionada */
+    document.querySelector(`nav [href='${("." + location.pathname)}'`).classList.add("destaqueOpcao")
+    
 })
 
 function soma() {
