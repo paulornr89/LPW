@@ -17,9 +17,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         }
     })
-
-    document.querySelector("#enviarForm").onclick = (e) => {
-        camposVazios()
+    if(location.pathname == "/form.html"){
+        document.querySelector("#enviarForm").onclick = (e) => {
+            camposVazios()
+        }
     }
 })
 
@@ -81,5 +82,9 @@ function camposVazios(event) {
     if(checkboxVazio == 0) {
         event.preventDefault();
         alert("Não tem nenhum checkbox preenchido!");
+    }
+
+    if((radioVazio != 0) && (checkboxVazio != 0)) {
+        alert("Avaliação realizada com Sucesso!!")
     }
 }
